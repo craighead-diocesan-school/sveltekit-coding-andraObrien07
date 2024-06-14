@@ -1,24 +1,36 @@
 <script>
     let usd = "";
+    //storing the input that the user inputs for usd
+    usd = Number(usd);
+
     let nzld = "";
+    //storing the converted usd to nzld
     nzld = Number(nzld);
 
-    usd = Number(usd);
+    const ConvR = 1.63;
+    // usd to nzld conversion rate as a constant because it doesnt change
+
+    // function connected to the button
     function changer() {
-        nzld = 1.63 * usd;
+        nzld = ConvR * usd;
+        // This function multiplies the usd value by the conversion rate ConvR and assigns the result to nzld.
     }
 </script>
 
 <main>
     <label for="usd">
         <input bind:value={usd} placeholder="Enter usd" />
+        <!-- An input bound to the usd variable. The bind:value ensures that the usd variable is updated with the input value. -->
     </label>
 
+    <!-- Displays the value of nzld, which is the result of the conversion from USD to NZD. -->
     <p>{nzld}</p>
     <button on:click={changer}>Convert</button>
+    <!-- A button that calls the changer function when clicked. This triggers the conversion of USD to NZD. -->
 </main>
 
 <style>
+    /* button style */
     button {
         width: 10rem;
         height: 10rem;
@@ -37,7 +49,7 @@
             inset -20px -20px 60px #ffffff;
     }
 
-    :global(*) {
+    /* :global(*) {
         background: #e0e0e0;
-    }
+    } */
 </style>

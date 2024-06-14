@@ -1,12 +1,19 @@
 <script>
+    // This variable will store the welcome message.
+    let welcomemessage = "";
+
     function sayhi() {
+        // A function that sets the welcomemessage variable to "Hi!".
+
         welcomemessage = "Hi!";
     }
-    let welcomemessage = "";
 </script>
 
 <main>
+    <!-- Displays the value of welcomemessage. Initially, this will be empty, but will change to "Hi!" when the button is clicked. -->
     <p>{welcomemessage}</p>
+
+    <!-- A button that calls the sayhi function when clicked. This updates the welcomemessage to "Hi!". -->
     <button on:click={sayhi}>Press Me</button>
 </main>
 
@@ -24,12 +31,9 @@
     }
 
     button:active {
+        /* Box shadows create a 3D effect, with different shadows applied when the button is active  */
         box-shadow:
             inset 20px 20px 60px #bebebe,
             inset -20px -20px 60px #ffffff;
-    }
-
-    :global(*) {
-        background: #e0e0e0;
     }
 </style>
