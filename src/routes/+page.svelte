@@ -1,4 +1,8 @@
 <script>
+  import Nav from "$lib/Nav.svelte";
+  import If from "$lib/If.svelte";
+  import UserRole from "$lib/UserRole.svelte";
+  import ProduceList from "$lib/ProduceList.svelte";
   let name = "world";
   let imageUrl = "https://picsum.photos/200";
   import ImageCard from "$lib/ImageCard.svelte";
@@ -6,7 +10,8 @@
   let selectedOption = "Option 1";
   let count = 0;
   import HiButton from "$lib/HiButton.svelte";
-  import NewMoney from "$lib/NewMoney.svelte";
+  // import NewMoney from "$lib/NewMoney.svelte";
+  import EachLoops from "$lib/EachLoops.svelte";
 
   function up() {
     count = count + 1;
@@ -17,6 +22,7 @@
   }
 </script>
 
+<Nav />
 <main>
   <ImageCard />
 
@@ -51,7 +57,11 @@
   <button on:click={down}>down</button>
 
   <HiButton />
-  <NewMoney />
+  <!-- <NewMoney /> -->
+  <If />
+  <UserRole />
+  <EachLoops />
+  <ProduceList />
 </main>
 
 <style>

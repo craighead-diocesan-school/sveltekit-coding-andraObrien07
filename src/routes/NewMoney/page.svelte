@@ -15,8 +15,10 @@
         nzld = ConvR * usd;
         // This function multiplies the usd value by the conversion rate ConvR and assigns the result to nzld.
     }
+    import Nav from "$lib/Nav.svelte";
 </script>
 
+<Nav />
 <main>
     <label for="usd">
         <input bind:value={usd} placeholder="Enter usd" />
