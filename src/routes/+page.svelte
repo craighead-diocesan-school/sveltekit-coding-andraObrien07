@@ -1,7 +1,7 @@
 <script>
   import Nav from "$lib/Nav.svelte";
   import If from "$lib/If.svelte";
-  import UserRole from "$lib/UserRole.svelte";
+  // import UserRole from "$lib/UserRole.svelte";
   import ProduceList from "$lib/ProduceList.svelte";
   let name = "world";
   let imageUrl = "https://picsum.photos/200";
@@ -59,7 +59,7 @@
   <HiButton />
   <!-- <NewMoney /> -->
   <If />
-  <UserRole />
+  <!-- <UserRole /> -->
   <EachLoops />
   <ProduceList />
 </main>
