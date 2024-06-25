@@ -2,7 +2,7 @@
   import Nav from "$lib/Nav.svelte";
   import If from "$lib/If.svelte";
   // import UserRole from "$lib/UserRole.svelte";
-  import ProduceList from "$lib/ProduceList.svelte";
+  // import ProduceList from "$lib/ProduceList.svelte";
   let name = "world";
   let imageUrl = "https://picsum.photos/200";
   import ImageCard from "$lib/ImageCard.svelte";
@@ -57,11 +57,11 @@
   <button on:click={down}>down</button>
 
   <HiButton />
-  <!-- <NewMoney /> -->
+
   <If />
-  <!-- <UserRole /> -->
+
   <EachLoops />
-  <ProduceList />
+  <!-- <ProduceList /> -->
 </main>
 
 <style>
